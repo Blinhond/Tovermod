@@ -6,26 +6,28 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class BlockRegistrator {
-    private List<Block> blocks;
+    private Block[] blocks;
 
     public BlockRegistrator() {
-        blocks = new ArrayList<>();
+        blocks = new Block[]{
+                // Add blocks here
 
-        // Add blocks to register here
+        };
     }
 
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> registryEvent) {
-        registryEvent.getRegistry().registerAll((Block[]) blocks.toArray());
+        registryEvent.getRegistry().registerAll(blocks);
     }
 
     @SubscribeEvent
     public void registerItemBlocks(RegistryEvent.Register<Item> registryEvent) {
         for (Block block : blocks) {
+            if (block.getRegistryName() == null) {
+                continue;
+            }
+
             registryEvent.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
         }
     }

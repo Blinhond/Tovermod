@@ -1,5 +1,6 @@
 package com.blinhond.tovermod;
 
+import com.blinhond.tovermod.init.EventHandlerRegistrator;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -19,6 +20,8 @@ public class ToverMod
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
+
+        EventHandlerRegistrator.register();
     }
 
     @Mod.EventHandler

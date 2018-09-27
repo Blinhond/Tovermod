@@ -7,7 +7,9 @@ public class Reference {
 
     public static enum ToverModItems {
         ASH("ash", "ItemAsh"),
-        URN("urn", "ItemUrn");
+        CLEANASH("cleanash",  "ItemCleanAsh"),
+        URN("urn", "ItemUrn"),
+        GOLDRING("goldring", "ItemGoldRing");
 
         private String unlocalizedName;
         private String registryName;

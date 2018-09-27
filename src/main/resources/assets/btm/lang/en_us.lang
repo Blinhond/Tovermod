@@ -1,6 +1,8 @@
 # items
 item.ash.name=Ashes
 item.urn.name=Urn
+item.cleanash.name=Clean Ashes
+item.goldring.name=Golden Ring
 
 # blocks
 tile.ashoreblock.name=Ash Ore

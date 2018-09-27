@@ -1,7 +1,9 @@
 package com.blinhond.tovermod.init;
 
 import com.blinhond.tovermod.items.ItemAsh;
+import com.blinhond.tovermod.items.ItemCleanAsh;
 import com.blinhond.tovermod.items.ItemUrn;
+import com.blinhond.tovermod.items.treasure.ItemGoldRing;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -18,15 +20,21 @@ public class ToverItems {
     // Items
     public static ItemAsh itemAsh;
     public static ItemUrn itemUrn;
+    public static ItemCleanAsh itemCleanAsh;
+    public static ItemGoldRing itemGoldRing;
 
     public static void init() {
         // Item initialization
         itemAsh = new ItemAsh();
         itemUrn = new ItemUrn();
+        itemCleanAsh = new ItemCleanAsh();
+        itemGoldRing = new ItemGoldRing();
 
         // Item registration
         initList.add(itemAsh);
         initList.add(itemUrn);
+        initList.add(itemCleanAsh);
+        initList.add(itemGoldRing);
 
         MinecraftForge.EVENT_BUS.register(new ToverItems());
     }

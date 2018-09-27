@@ -1,11 +1,14 @@
 # items
 item.ash.name=Ashes
 item.urn.name=Urn
+item.rawurn.name=Raw Urn
 item.cleanash.name=Clean Ashes
 item.goldring.name=Golden Ring
+item.nocturnaleye.name=Nocturnal Eye
 
 # blocks
 tile.ashoreblock.name=Ash Ore
+tile.solidashblock.name=Solid Ash
 
 # tabs
 itemGroup.Tovermod=Tover Mod

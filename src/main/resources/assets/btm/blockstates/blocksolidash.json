@@ -1,7 +1,7 @@
 {
   "variants": {
     "normal": {
-      "model": "btm:ashoreblock"
+      "model": "btm:solidashblock"
     }
   }
 }

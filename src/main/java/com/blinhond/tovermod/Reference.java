@@ -9,7 +9,9 @@ public class Reference {
         ASH("ash", "ItemAsh"),
         CLEANASH("cleanash",  "ItemCleanAsh"),
         URN("urn", "ItemUrn"),
-        GOLDRING("goldring", "ItemGoldRing");
+        RAWURN("rawurn", "ItemRawUrn"),
+        GOLDRING("goldring", "ItemGoldRing"),
+        NOCTURNALEYE("nocturnaleye", "ItemNocturnalEye");
 
         private String unlocalizedName;
         private String registryName;
@@ -29,7 +31,8 @@ public class Reference {
     }
 
     public static enum ToverModBlocks {
-        ASHOREBLOCK("ashoreblock", "BlockAshOre");
+        ASHOREBLOCK("ashoreblock", "BlockAshOre"),
+        SOLIDASHBLOCK("solidashblock", "BlockSolidAsh");
 
         private String unlocalizedName;
         private String registryName;

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "btm:itemash"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result":
+  {
+    "item": "btm:itemcleanash",
+    "count": 1
+  }
+}

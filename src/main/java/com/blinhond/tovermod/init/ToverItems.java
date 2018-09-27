@@ -1,7 +1,7 @@
 package com.blinhond.tovermod.init;
 
 import com.blinhond.tovermod.items.ItemAsh;
-import net.minecraft.block.Block;
+import com.blinhond.tovermod.items.ItemUrn;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -17,13 +17,16 @@ public class ToverItems {
 
     // Items
     public static ItemAsh itemAsh;
+    public static ItemUrn itemUrn;
 
     public static void init() {
         // Item initialization
         itemAsh = new ItemAsh();
+        itemUrn = new ItemUrn();
 
         // Item registration
         initList.add(itemAsh);
+        initList.add(itemUrn);
 
         MinecraftForge.EVENT_BUS.register(new ToverItems());
     }

@@ -1,9 +1,6 @@
 package com.blinhond.tovermod.init;
 
-import com.blinhond.tovermod.items.ItemAsh;
-import com.blinhond.tovermod.items.ItemCleanAsh;
-import com.blinhond.tovermod.items.ItemRawUrn;
-import com.blinhond.tovermod.items.ItemUrn;
+import com.blinhond.tovermod.items.*;
 import com.blinhond.tovermod.items.magic.ItemNocturnalEye;
 import com.blinhond.tovermod.items.treasure.ItemGoldRing;
 import net.minecraft.client.Minecraft;
@@ -26,6 +23,7 @@ public class ToverItems {
     public static ItemCleanAsh itemCleanAsh;
     public static ItemGoldRing itemGoldRing;
     public static ItemNocturnalEye itemNocturnalEye;
+    public static ItemLuminiteShard itemLuminiteShard;
 
     public static void init() {
         // Item initialization
@@ -35,6 +33,7 @@ public class ToverItems {
         itemCleanAsh = new ItemCleanAsh();
         itemGoldRing = new ItemGoldRing();
         itemNocturnalEye = new ItemNocturnalEye();
+        itemLuminiteShard = new ItemLuminiteShard();
 
         // Item registration
         initList.add(itemAsh);
@@ -43,6 +42,7 @@ public class ToverItems {
         initList.add(itemCleanAsh);
         initList.add(itemGoldRing);
         initList.add(itemNocturnalEye);
+        initList.add(itemLuminiteShard);
 
         MinecraftForge.EVENT_BUS.register(new ToverItems());
     }

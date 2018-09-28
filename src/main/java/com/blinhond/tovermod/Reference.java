@@ -11,7 +11,8 @@ public class Reference {
         URN("urn", "ItemUrn"),
         RAWURN("rawurn", "ItemRawUrn"),
         GOLDRING("goldring", "ItemGoldRing"),
-        NOCTURNALEYE("nocturnaleye", "ItemNocturnalEye");
+        NOCTURNALEYE("nocturnaleye", "ItemNocturnalEye"),
+        LUMINITESHARD("luminiteshard", "ItemLuminiteShard");
 
         private String unlocalizedName;
         private String registryName;
@@ -32,6 +33,7 @@ public class Reference {
 
     public static enum ToverModBlocks {
         ASHOREBLOCK("ashoreblock", "BlockAshOre"),
+        LUMINITEOREBLOCK("luminiteoreblock", "BlockLuminiteOre"),
         SOLIDASHBLOCK("solidashblock", "BlockSolidAsh");
 
         private String unlocalizedName;

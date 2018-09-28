@@ -5,9 +5,11 @@ item.rawurn.name=Raw Urn
 item.cleanash.name=Clean Ashes
 item.goldring.name=Golden Ring
 item.nocturnaleye.name=Nocturnal Eye
+item.luminiteshard.name=Luminite Shard
 
 # blocks
 tile.ashoreblock.name=Ash Ore
+tile.luminiteoreblock.nameLuminite Ore
 tile.solidashblock.name=Solid Ash
 
 # tabs

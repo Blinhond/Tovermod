@@ -1,6 +1,7 @@
 package com.blinhond.tovermod.init;
 
 import com.blinhond.tovermod.blocks.BlockAshOre;
+import com.blinhond.tovermod.blocks.BlockLuminiteOre;
 import com.blinhond.tovermod.blocks.BlockSolidAsh;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -19,15 +20,18 @@ public class ToverBlocks {
 
     // Blocks
     public static BlockAshOre blockAshOre;
+    public static BlockLuminiteOre blockLuminiteOre;
     public static BlockSolidAsh blockSolidAsh;
 
     public static void init() {
         // Block initialization
         blockAshOre = new BlockAshOre();
+        blockLuminiteOre = new BlockLuminiteOre();
         blockSolidAsh = new BlockSolidAsh();
 
         // Block registration
         initList.add(blockAshOre);
+        initList.add(blockLuminiteOre);
         initList.add(blockSolidAsh);
 
         MinecraftForge.EVENT_BUS.register(new ToverBlocks());

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "btm:itemcleanash"
+    },
+    {
+      "item": "btm:itemurn"
+    }
+  ],
+  "result":
+  {
+    "item": "btm:itemfilledurn",
+    "count": 1
+  }
+}

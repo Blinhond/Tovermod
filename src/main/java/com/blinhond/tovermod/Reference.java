@@ -13,9 +13,11 @@ public class Reference {
         CLEANASH("cleanash",  "ItemCleanAsh"),
         URN("urn", "ItemUrn"),
         RAWURN("rawurn", "ItemRawUrn"),
+        FILLEDURN("filledurn", "ItemFilledUrn"),
         GOLDRING("goldring", "ItemGoldRing"),
         NOCTURNALEYE("nocturnaleye", "ItemNocturnalEye"),
         LUMINITESHARD("luminiteshard", "ItemLuminiteShard"),
+        ILLUMINATEDSHARD("illuminatedshard", "ItemIlluminatedShard"),
         BLACKASH("blackash", "ItemBlackAsh");
 
         private String unlocalizedName;

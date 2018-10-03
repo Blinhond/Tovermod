@@ -24,6 +24,7 @@ public class ToverItems {
     public static ItemGoldRing itemGoldRing;
     public static ItemNocturnalEye itemNocturnalEye;
     public static ItemLuminiteShard itemLuminiteShard;
+    public static ItemBlackAsh itemBlackAsh;
 
     public static void init() {
         // Item initialization
@@ -34,6 +35,7 @@ public class ToverItems {
         itemGoldRing = new ItemGoldRing();
         itemNocturnalEye = new ItemNocturnalEye();
         itemLuminiteShard = new ItemLuminiteShard();
+        itemBlackAsh = new ItemBlackAsh();
 
         // Item registration
         initList.add(itemAsh);
@@ -43,6 +45,7 @@ public class ToverItems {
         initList.add(itemGoldRing);
         initList.add(itemNocturnalEye);
         initList.add(itemLuminiteShard);
+        initList.add(itemBlackAsh);
 
         MinecraftForge.EVENT_BUS.register(new ToverItems());
     }

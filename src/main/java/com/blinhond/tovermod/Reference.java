@@ -12,7 +12,8 @@ public class Reference {
         RAWURN("rawurn", "ItemRawUrn"),
         GOLDRING("goldring", "ItemGoldRing"),
         NOCTURNALEYE("nocturnaleye", "ItemNocturnalEye"),
-        LUMINITESHARD("luminiteshard", "ItemLuminiteShard");
+        LUMINITESHARD("luminiteshard", "ItemLuminiteShard"),
+        BLACKASH("blackash", "ItemBlackAsh");
 
         private String unlocalizedName;
         private String registryName;

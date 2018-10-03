@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "btm:itemash"
+    },
+    {
+      "item": "minecraft:coal"
+    }
+  ],
+  "result":
+  {
+    "item": "btm:itemblackash",
+    "count": 1
+  }
+}

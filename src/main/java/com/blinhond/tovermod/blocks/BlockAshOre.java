@@ -8,6 +8,10 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 
 import java.util.Random;
 
@@ -24,12 +28,18 @@ public class BlockAshOre extends Block {
     }
 
     @Override
-    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return ToverItems.itemAsh;
+    public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
+        super.getDrops(drops, world, pos, state, fortune);
+
+        drops.add(new ItemStack(ToverItems.itemAsh, 2));
     }
 
     @Override
-    public int quantityDropped(IBlockState state, int fortune, Random random) {
-        return 1 + random.nextInt(2);
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        if (rand.nextInt(100) > 5) {
+            return null;
+        }
+
+        return ToverItems.itemGoldRing;
     }
 }

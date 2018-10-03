@@ -25,8 +25,8 @@ public class OreGenerator implements IWorldGenerator {
                          IChunkProvider chunkProvider) {
 
 
-        runGenerator(ashOreGenerator, world, random, chunkX, chunkZ, 30, 0, 64);
-        runGenerator(luminiteOreGenerator, world, random, chunkX, chunkZ, 20, 0, 64);
+        runGenerator(ashOreGenerator, world, random, chunkX, chunkZ, 25, 0, 64);
+        runGenerator(luminiteOreGenerator, world, random, chunkX, chunkZ, 15, 0, 64);
     }
 
     private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {

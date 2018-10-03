@@ -16,33 +16,39 @@ import java.util.List;
 public class ToverItems {
     private static List<Item> initList = new ArrayList<>();
 
-    // Items
+    // Item declaration
     public static ItemAsh itemAsh;
     public static ItemUrn itemUrn;
     public static ItemRawUrn itemRawUrn;
+    public static ItemFilledUrn itemFilledUrn;
     public static ItemCleanAsh itemCleanAsh;
     public static ItemGoldRing itemGoldRing;
     public static ItemNocturnalEye itemNocturnalEye;
     public static ItemLuminiteShard itemLuminiteShard;
+    public static ItemIlluminatedShard itemIlluminatedShard;
 
     public static void init() {
         // Item initialization
         itemAsh = new ItemAsh();
         itemUrn = new ItemUrn();
         itemRawUrn = new ItemRawUrn();
+        itemFilledUrn = new ItemFilledUrn();
         itemCleanAsh = new ItemCleanAsh();
         itemGoldRing = new ItemGoldRing();
         itemNocturnalEye = new ItemNocturnalEye();
         itemLuminiteShard = new ItemLuminiteShard();
+        itemIlluminatedShard = new ItemIlluminatedShard();
 
         // Item registration
         initList.add(itemAsh);
         initList.add(itemUrn);
         initList.add(itemRawUrn);
+        initList.add(itemFilledUrn);
         initList.add(itemCleanAsh);
         initList.add(itemGoldRing);
         initList.add(itemNocturnalEye);
         initList.add(itemLuminiteShard);
+        initList.add(itemIlluminatedShard);
 
         MinecraftForge.EVENT_BUS.register(new ToverItems());
     }

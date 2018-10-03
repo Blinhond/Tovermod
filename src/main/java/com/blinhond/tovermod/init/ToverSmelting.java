@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ToverSmelting {
     public static void init() {
         addSmeltingRecipe(ToverItems.itemRawUrn, ToverItems.itemUrn);
+        addSmeltingRecipe(ToverItems.itemLuminiteShard, ToverItems.itemIlluminatedShard);
     }
 
     private static void addSmeltingRecipe(Item in, Item out) {

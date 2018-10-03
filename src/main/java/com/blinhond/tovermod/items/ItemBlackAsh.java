@@ -14,6 +14,6 @@ public class ItemBlackAsh extends Item {
 
     @Override
     public int getItemBurnTime(ItemStack itemStack) {
-        return 30 * 1000;
+        return 1600;
     }
 }

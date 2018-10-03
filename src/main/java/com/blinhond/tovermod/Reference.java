@@ -5,6 +5,9 @@ public class Reference {
     public static final String NAME = "Tovermod";
     public static final String VERSION = "1.0";
 
+    // Constants
+    public static final int MAX_STACK_SIZE_POTS= 16;
+
     public static enum ToverModItems {
         ASH("ash", "ItemAsh"),
         CLEANASH("cleanash",  "ItemCleanAsh"),
@@ -14,7 +17,8 @@ public class Reference {
         GOLDRING("goldring", "ItemGoldRing"),
         NOCTURNALEYE("nocturnaleye", "ItemNocturnalEye"),
         LUMINITESHARD("luminiteshard", "ItemLuminiteShard"),
-        ILLUMINATEDSHARD("illuminatedshard", "ItemIlluminatedShard");
+        ILLUMINATEDSHARD("illuminatedshard", "ItemIlluminatedShard"),
+        BLACKASH("blackash", "ItemBlackAsh");
 
         private String unlocalizedName;
         private String registryName;

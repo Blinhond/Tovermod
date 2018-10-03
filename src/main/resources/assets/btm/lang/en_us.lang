@@ -8,6 +8,7 @@ item.goldring.name=Golden Ring
 item.nocturnaleye.name=Nocturnal Eye
 item.luminiteshard.name=Luminite Shard
 item.illuminatedshard.name=Illuminated Shard
+item.blackash.name=Black Ash
 
 # blocks
 tile.ashoreblock.name=Ash Ore

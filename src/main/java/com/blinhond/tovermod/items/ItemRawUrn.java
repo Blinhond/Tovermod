@@ -9,5 +9,6 @@ public class ItemRawUrn extends Item {
         setRegistryName(Reference.ToverModItems.RAWURN.getRegistryName());
         setUnlocalizedName(Reference.ToverModItems.RAWURN.getUnlocalizedName());
         setCreativeTab(ToverCreative.TOVERMOD);
+        setMaxStackSize(Reference.MAX_STACK_SIZE_POTS);
     }
 }

@@ -3,10 +3,12 @@ package com.blinhond.tovermod;
 import com.blinhond.tovermod.init.ToverBlocks;
 import com.blinhond.tovermod.init.ToverItems;
 import com.blinhond.tovermod.init.ToverSmelting;
+import com.blinhond.tovermod.util.handlers.GUIHandler;
 import com.blinhond.tovermod.worldgen.OreGenerator;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.Logger;
 
@@ -37,5 +39,6 @@ public class ToverMod
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
         ToverItems.registerRenders();
         ToverBlocks.registerRenders();
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GUIHandler());
     }
 }

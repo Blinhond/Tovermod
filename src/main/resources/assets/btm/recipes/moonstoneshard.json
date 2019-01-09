@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "btm:itemmoonstone"
+    },
+    {
+      "item": "minecraft:flint"
+    }
+  ],
+  "result":
+  {
+    "item": "btm:itemmoonstoneshard",
+    "count": 2
+  }
+}

@@ -13,11 +13,19 @@ item.quickash.name=Quick Ashes
 item.vitalash.name=Vital Ashes
 item.alchemistash.name=Alchemist' ashes
 item.needyfinger.name=Needy Finger
+item.moonstone.name=Moonstone
+item.moonstoneshard.name=Moonstone Shard
+item.moonstonepickaxe.name=Moonstone Pickaxe
 
 # blocks
 tile.ashoreblock.name=Ash Ore
 tile.luminiteoreblock.name=Luminite Ore
 tile.solidashblock.name=Solid Ash
+tile.moonstoneoreblock.name=Moonstone Ore
+tile.alchemistfurnace.name=Alchemist' Furnace
+
+# containers
+container.alchemistfurnace=Alchemist' Furnace
 
 # tabs
 itemGroup.Tovermod=Tover Mod

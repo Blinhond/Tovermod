@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    " y ",
+    " y "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "btm:itemmoonstoneshard"
+    },
+    "y": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "btm:itemmoonstonepickaxe",
+    "count": 1
+  }
+}

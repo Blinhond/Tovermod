@@ -14,10 +14,12 @@ import java.util.Random;
 public class OreGenerator implements IWorldGenerator {
     private WorldGenerator ashOreGenerator;
     private WorldGenerator luminiteOreGenerator;
+    private WorldGenerator moonstoneOreGenerator;
 
     public OreGenerator() {
         ashOreGenerator = new WorldGenMinable(ToverBlocks.blockAshOre.getDefaultState(), 10);
         luminiteOreGenerator = new WorldGenMinable(ToverBlocks.blockLuminiteOre.getDefaultState(), 8);
+        moonstoneOreGenerator = new WorldGenMinable(ToverBlocks.blockMoonstoneOre.getDefaultState(), 1);
     }
 
     @Override
@@ -27,6 +29,7 @@ public class OreGenerator implements IWorldGenerator {
 
         runGenerator(ashOreGenerator, world, random, chunkX, chunkZ, 25, 0, 64);
         runGenerator(luminiteOreGenerator, world, random, chunkX, chunkZ, 15, 0, 64);
+        runGenerator(moonstoneOreGenerator, world, random, chunkX, chunkZ, 15, 16, 64);
     }
 
     private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {

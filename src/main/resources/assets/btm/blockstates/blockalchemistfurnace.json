@@ -1,0 +1,13 @@
+{
+  "variants":
+  {
+    "burning=false,facing=north": { "model": "btm:alchemistfurnaceblockoff" },
+    "burning=false,facing=east": { "model": "btm:alchemistfurnaceblockoff", "y": 90 },
+    "burning=false,facing=south": { "model": "btm:alchemistfurnaceblockoff", "y": 180 },
+    "burning=false,facing=west": { "model": "btm:alchemistfurnaceblockoff", "y": 270 },
+    "burning=true,facing=north": { "model": "btm:alchemistfurnaceblockon" },
+    "burning=true,facing=east": { "model": "btm:alchemistfurnaceblockon", "y": 90 },
+    "burning=true,facing=south": { "model": "btm:alchemistfurnaceblockon", "y": 180 },
+    "burning=true,facing=west": { "model": "btm:alchemistfurnaceblockon", "y":270  }
+  }
+}

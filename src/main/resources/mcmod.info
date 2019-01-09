@@ -1,14 +1,14 @@
 [
 {
   "modid": "btm",
-  "name": "Tovermod",
-  "description": "Een mod om even te toveren.",
-  "version": "${version}",
+  "name": "Tover mod",
+  "description": "Strange magic and alchemy.",
+  "version": "1.0",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
   "authorList": ["Blinhond"],
-  "credits": "The Forge and FML guys for supplying the MC mod API and the corresponding documentation",
+  "credits": "The Forge and FML guys for supplying the MC mod API and the corresponding documentation.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

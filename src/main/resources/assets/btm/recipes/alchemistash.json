@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "btm:itemcleanash"
+    },
+    {
+      "item": "btm:itemilluminatedshard"
+    }
+  ],
+  "result":
+  {
+    "item": "btm:itemalchemistash",
+    "count": 1
+  }
+}

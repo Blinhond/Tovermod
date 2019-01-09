@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "xyx",
+    "xzx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    "y": {
+      "item": "minecraft:gold_ingot"
+    },
+    "z": {
+      "item": "minecraft:bone"
+    }
+  },
+  "result":
+  {
+    "item": "btm:itemneedyfinger",
+    "count": 1
+  }
+}

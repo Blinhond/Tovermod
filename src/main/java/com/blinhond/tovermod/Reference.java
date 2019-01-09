@@ -18,7 +18,11 @@ public class Reference {
         NOCTURNALEYE("nocturnaleye", "ItemNocturnalEye"),
         LUMINITESHARD("luminiteshard", "ItemLuminiteShard"),
         ILLUMINATEDSHARD("illuminatedshard", "ItemIlluminatedShard"),
-        BLACKASH("blackash", "ItemBlackAsh");
+        BLACKASH("blackash", "ItemBlackAsh"),
+        QUICKASH("quickash", "ItemQuickAsh"),
+        VITALASH("vitalash", "ItemVitalAsh"),
+        ALCHEMISTASH("alchemistash", "ItemAlchemistAsh"),
+        NEEDYFINGER("needyfinger", "ItemNeedyFinger");
 
         private String unlocalizedName;
         private String registryName;
@@ -41,7 +45,6 @@ public class Reference {
         ASHOREBLOCK("ashoreblock", "BlockAshOre"),
         LUMINITEOREBLOCK("luminiteoreblock", "BlockLuminiteOre"),
         SOLIDASHBLOCK("solidashblock", "BlockSolidAsh");
-
         private String unlocalizedName;
         private String registryName;
 

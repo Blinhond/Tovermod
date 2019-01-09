@@ -9,10 +9,14 @@ item.nocturnaleye.name=Nocturnal Eye
 item.luminiteshard.name=Luminite Shard
 item.illuminatedshard.name=Illuminated Shard
 item.blackash.name=Black Ash
+item.quickash.name=Quick Ashes
+item.vitalash.name=Vital Ashes
+item.alchemistash.name=Alchemist' ashes
+item.needyfinger.name=Needy Finger
 
 # blocks
 tile.ashoreblock.name=Ash Ore
-tile.luminiteoreblock.nameLuminite Ore
+tile.luminiteoreblock.name=Luminite Ore
 tile.solidashblock.name=Solid Ash
 
 # tabs

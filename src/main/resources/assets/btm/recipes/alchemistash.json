@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "btm:itemash"
+      "item": "btm:itemcleanash"
     },
     {
-      "item": "minecraft:coal"
+      "item": "btm:itemilluminatedshard"
     }
   ],
   "result":
   {
-    "item": "btm:itemblackash",
+    "item": "btm:itemalchemistash",
     "count": 1
   }
 }

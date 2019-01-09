@@ -2,6 +2,8 @@ package com.blinhond.tovermod.init;
 
 import com.blinhond.tovermod.items.*;
 import com.blinhond.tovermod.items.magic.ItemNocturnalEye;
+import com.blinhond.tovermod.items.magic.ItemQuickAsh;
+import com.blinhond.tovermod.items.magic.ItemVitalAsh;
 import com.blinhond.tovermod.items.treasure.ItemGoldRing;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -27,6 +29,10 @@ public class ToverItems {
     public static ItemLuminiteShard itemLuminiteShard;
     public static ItemIlluminatedShard itemIlluminatedShard;
     public static ItemBlackAsh itemBlackAsh;
+    public static ItemQuickAsh itemQuickAsh;
+    public static ItemVitalAsh itemVitalAsh;
+    public static ItemAlchemistAsh itemAlchemistAsh;
+    public static ItemNeedyFinger itemNeedyFinger;
 
     public static void init() {
         // Item initialization
@@ -40,6 +46,10 @@ public class ToverItems {
         itemLuminiteShard = new ItemLuminiteShard();
         itemIlluminatedShard = new ItemIlluminatedShard();
         itemBlackAsh = new ItemBlackAsh();
+        itemQuickAsh = new ItemQuickAsh();
+        itemVitalAsh = new ItemVitalAsh();
+        itemAlchemistAsh = new ItemAlchemistAsh();
+        itemNeedyFinger = new ItemNeedyFinger();
 
         // Item registration
         initList.add(itemAsh);
@@ -52,6 +62,10 @@ public class ToverItems {
         initList.add(itemLuminiteShard);
         initList.add(itemIlluminatedShard);
         initList.add(itemBlackAsh);
+        initList.add(itemQuickAsh);
+        initList.add(itemVitalAsh);
+        initList.add(itemAlchemistAsh);
+        initList.add(itemNeedyFinger);
 
         MinecraftForge.EVENT_BUS.register(new ToverItems());
     }

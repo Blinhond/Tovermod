@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "btm:itemilluminatedshard"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:bone"
+    }
+  ],
+  "result":
+  {
+    "item": "btm:itemash",
+    "count": 1
+  }
+}

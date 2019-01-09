@@ -3,19 +3,22 @@
   "pattern":
   [
     "xxx",
-    "xxx",
+    "xyx",
     "xxx"
   ],
   "key":
   {
     "x":
     {
-      "item": "btm:itemash"
+      "item": "btm:itemalchemistash"
+    },
+    "y": {
+      "item": "minecraft:iron_ingot"
     }
   },
   "result":
   {
-    "item": "btm:blocksolidash",
+    "item": "minecraft:gold_ingot",
     "count": 1
   }
 }

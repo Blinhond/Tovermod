@@ -3,22 +3,22 @@
   "pattern":
   [
     "xxx",
-    "xyx",
-    "xxx"
+    " y ",
+    " y "
   ],
   "key":
   {
     "x":
     {
-      "item": "btm:itemalchemistash"
+      "item": "btm:itemneedyfinger"
     },
     "y": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:rotten_flesh"
     }
   },
   "result":
   {
-    "item": "minecraft:gold_ingot",
+    "item": "btm:itemgreedyhand",
     "count": 1
   }
 }

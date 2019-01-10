@@ -28,7 +28,12 @@ public class Reference {
         NEEDYFINGER("needyfinger", "ItemNeedyFinger"),
         MOONSTONE("moonstone", "ItemMoonstone"),
         MOONSTONESHARD("moonstoneshard", "ItemMoonstoneShard"),
-        MOONSTONEPICKAXE("moonstonepickaxe", "ItemMoonstonePickaxe");
+        MOONSTONEPICKAXE("moonstonepickaxe", "ItemMoonstonePickaxe"),
+        GREEDYHAND("greedyhand", "ItemGreedyHand"),
+        CURSEDBLOOD("cursedblood", "ItemCursedBlood"),
+        BLOODYHAND("bloodyhand", "ItemBloodyHand"),
+        SOLIDBLOOD("solidblood", "ItemSolidBlood"),
+        POINTINGHAND("pointinghand", "ItemPointingHand");
 
         private String unlocalizedName;
         private String registryName;
@@ -52,7 +57,8 @@ public class Reference {
         LUMINITEOREBLOCK("luminiteoreblock", "BlockLuminiteOre"),
         SOLIDASHBLOCK("solidashblock", "BlockSolidAsh"),
         MOONSTONEOREBLOCK("moonstoneoreblock", "BlockMoonstoneOre"),
-        ALCHEMISTFURNACE("alchemistfurnaceblock", "BlockAlchemistFurnace");
+        ALCHEMISTFURNACE("alchemistfurnaceblock", "BlockAlchemistFurnace"),
+        BLOODBLOCK("bloodblock", "BlockBlood");
 
         private String unlocalizedName;
         private String registryName;

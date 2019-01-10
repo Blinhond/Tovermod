@@ -1,9 +1,6 @@
 package com.blinhond.tovermod.init;
 
-import com.blinhond.tovermod.blocks.BlockAshOre;
-import com.blinhond.tovermod.blocks.BlockLuminiteOre;
-import com.blinhond.tovermod.blocks.BlockMoonstoneOre;
-import com.blinhond.tovermod.blocks.BlockSolidAsh;
+import com.blinhond.tovermod.blocks.*;
 import com.blinhond.tovermod.blocks.machines.BlockAlchemistFurnace;
 import com.blinhond.tovermod.util.handlers.TileEntityHandler;
 import net.minecraft.block.Block;
@@ -27,6 +24,7 @@ public class ToverBlocks {
     public static BlockSolidAsh blockSolidAsh;
     public static BlockMoonstoneOre blockMoonstoneOre;
     public static BlockAlchemistFurnace blockAlchemistFurnace;
+    public static BlockBlood blockBlood;
 
     public static void init() {
         // Block initialization
@@ -35,6 +33,7 @@ public class ToverBlocks {
         blockSolidAsh = new BlockSolidAsh();
         blockMoonstoneOre = new BlockMoonstoneOre();
         blockAlchemistFurnace = new BlockAlchemistFurnace();
+        blockBlood = new BlockBlood();
 
         // Block registration
         initList.add(blockAshOre);
@@ -42,6 +41,7 @@ public class ToverBlocks {
         initList.add(blockSolidAsh);
         initList.add(blockMoonstoneOre);
         initList.add(blockAlchemistFurnace);
+        initList.add(blockBlood);
 
         MinecraftForge.EVENT_BUS.register(new ToverBlocks());
     }

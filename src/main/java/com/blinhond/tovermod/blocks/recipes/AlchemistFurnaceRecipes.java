@@ -2,8 +2,10 @@ package com.blinhond.tovermod.blocks.recipes;
 
 import com.blinhond.tovermod.init.ToverItems;
 import com.google.common.collect.Maps;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import org.apache.commons.lang3.tuple.Triple;
 
@@ -27,9 +29,31 @@ public class AlchemistFurnaceRecipes {
 
     private AlchemistFurnaceRecipes()
     {
-        addSmeltingRecipe(new ItemStack(Blocks.LOG), new ItemStack(ToverItems.itemAlchemistAsh), new ItemStack(Items.COAL), 5.0F);
+        addSmeltingRecipe(Blocks.LOG, Items.COAL);
+        addSmeltingRecipe(Items.IRON_INGOT, Items.GOLD_INGOT);
+        addSmeltingRecipe(Items.APPLE, ToverItems.itemVitalAsh);
+        addSmeltingRecipe(Items.FEATHER, ToverItems.itemQuickAsh);
+        addSmeltingRecipe(Items.ROTTEN_FLESH, ToverItems.itemCursedBlood);
+        addSmeltingRecipe(ToverItems.itemGreedyHand, ToverItems.itemCursedBlood, ToverItems.itemBloodyHand);
+        addSmeltingRecipe(ToverItems.itemGreedyHand, Items.DIAMOND, ToverItems.itemPointingHand);
+        addSmeltingRecipe(ToverItems.itemCursedBlood, Items.IRON_INGOT, ToverItems.itemSolidBlood);
     }
 
+    public void addSmeltingRecipe(Block input, Item result) {
+        addSmeltingRecipe(input, ToverItems.itemAlchemistAsh, result);
+    }
+
+    public void addSmeltingRecipe(Item input, Item result) {
+        addSmeltingRecipe(input, ToverItems.itemAlchemistAsh, result);
+    }
+
+    public void addSmeltingRecipe(Block input1, Item input2, Item result) {
+        addSmeltingRecipe(new ItemStack(input1), new ItemStack(input2), new ItemStack(result), 0.5F);
+    }
+
+    public void addSmeltingRecipe(Item input1, Item input2, Item result) {
+        addSmeltingRecipe(new ItemStack(input1), new ItemStack(input2), new ItemStack(result), 0.5F);
+    }
 
     public void addSmeltingRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience)
     {

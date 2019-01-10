@@ -26,6 +26,7 @@ public class TileEntityAlchemistFurnace extends TileEntity implements ITickable 
     private ItemStackHandler handler = new ItemStackHandler(4);
     private String customName;
     private ItemStack smelting = ItemStack.EMPTY;
+    private AlchemistFurnaceRecipes recipes = AlchemistFurnaceRecipes.getInstance();
 
     private int burnTime;
     private int currentBurnTime;
@@ -93,13 +94,14 @@ public class TileEntityAlchemistFurnace extends TileEntity implements ITickable 
     public void update() {
         if (this.isBurning()) {
             --this.burnTime;
-            BlockAlchemistFurnace.setState(true, world, pos);
         }
+
+        BlockAlchemistFurnace.setState(isBurning(), world, pos);
 
         ItemStack[] inputs = new ItemStack[]{handler.getStackInSlot(0), handler.getStackInSlot(1)};
         ItemStack fuel = this.handler.getStackInSlot(2);
 
-        if (this.isBurning() || !fuel.isEmpty() && !this.handler.getStackInSlot(0).isEmpty() || this.handler.getStackInSlot(1).isEmpty()) {
+        if (this.isBurning() || !fuel.isEmpty() && !this.handler.getStackInSlot(0).isEmpty() && !this.handler.getStackInSlot(1).isEmpty()) {
             if (!this.isBurning() && this.canSmelt()) {
                 this.burnTime = getItemBurnTime(fuel);
                 this.currentBurnTime = burnTime;
@@ -118,6 +120,7 @@ public class TileEntityAlchemistFurnace extends TileEntity implements ITickable 
 
         if (this.isBurning() && this.canSmelt() && cookTime > 0) {
             cookTime++;
+
             if (cookTime == totalCookTime) {
                 if (handler.getStackInSlot(3).getCount() > 0) {
                     handler.getStackInSlot(3).grow(1);
@@ -129,61 +132,60 @@ public class TileEntityAlchemistFurnace extends TileEntity implements ITickable 
                 cookTime = 0;
                 return;
             }
-        } else {
-            if (this.canSmelt() && this.isBurning()) {
-                ItemStack output = AlchemistFurnaceRecipes.getInstance().getSmeltingResult(inputs[0], inputs[1]);
-                if (!output.isEmpty()) {
-                    smelting = output;
-                    cookTime++;
-                    inputs[0].shrink(1);
-                    inputs[1].shrink(1);
-                    handler.setStackInSlot(0, inputs[0]);
-                    handler.setStackInSlot(1, inputs[1]);
-                }
+        } else if (this.isBurning() && this.canSmelt()) {
+            ItemStack output = AlchemistFurnaceRecipes.getInstance().getSmeltingResult(inputs[0], inputs[1]);
+            if (!output.isEmpty()) {
+                smelting = output;
+                cookTime++;
+                inputs[0].shrink(1);
+                inputs[1].shrink(1);
+                handler.setStackInSlot(0, inputs[0]);
+                handler.setStackInSlot(1, inputs[1]);
             }
         }
     }
 
     private boolean canSmelt() {
-        if (((ItemStack) this.handler.getStackInSlot(0)).isEmpty() || ((ItemStack) this.handler.getStackInSlot(1)).isEmpty())
+        if (this.handler.getStackInSlot(0).isEmpty() || this.handler.getStackInSlot(1).isEmpty())
             return false;
         else {
-            ItemStack result = AlchemistFurnaceRecipes.getInstance().getSmeltingResult((ItemStack) this.handler.getStackInSlot(0), (ItemStack) this.handler.getStackInSlot(1));
+            ItemStack result = recipes.getSmeltingResult(this.handler.getStackInSlot(0), this.handler.getStackInSlot(1));
+
             if (result.isEmpty()) return false;
             else {
-                ItemStack output = (ItemStack) this.handler.getStackInSlot(3);
+                ItemStack output = this.handler.getStackInSlot(3);
                 if (output.isEmpty()) return true;
                 if (!output.isItemEqual(result)) return false;
                 int res = output.getCount() + result.getCount();
-                return res <= 64 && res <= output.getMaxStackSize();
+                return res <= output.getMaxStackSize() && res <= 64;
             }
         }
     }
 
     public static int getItemBurnTime(ItemStack fuel) {
         if (fuel.isEmpty()) return 0;
-        else {
-            Item item = fuel.getItem();
 
-            if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.AIR) {
-                Block block = Block.getBlockFromItem(item);
+        Item item = fuel.getItem();
 
-                if (block == Blocks.WOODEN_SLAB) return 150;
-                if (block.getDefaultState().getMaterial() == Material.WOOD) return 300;
-                if (block == Blocks.COAL_BLOCK) return 16000;
-            }
+        if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.AIR) {
+            Block block = Block.getBlockFromItem(item);
 
-            if (item instanceof ItemTool && "WOOD".equals(((ItemTool) item).getToolMaterialName())) return 200;
-            if (item instanceof ItemSword && "WOOD".equals(((ItemSword) item).getToolMaterialName())) return 200;
-            if (item instanceof ItemHoe && "WOOD".equals(((ItemHoe) item).getMaterialName())) return 200;
-            if (item == Items.STICK) return 100;
-            if (item == Items.COAL) return 1600;
-            if (item == Items.LAVA_BUCKET) return 20000;
-            if (item == Item.getItemFromBlock(Blocks.SAPLING)) return 100;
-            if (item == Items.BLAZE_ROD) return 2400;
-
-            return GameRegistry.getFuelValue(fuel);
+            if (block == Blocks.WOODEN_SLAB) return 150;
+            if (block.getDefaultState().getMaterial() == Material.WOOD) return 300;
+            if (block == Blocks.COAL_BLOCK) return 16000;
         }
+
+        if (item instanceof ItemTool && "WOOD".equals(((ItemTool) item).getToolMaterialName())) return 200;
+        if (item instanceof ItemSword && "WOOD".equals(((ItemSword) item).getToolMaterialName())) return 200;
+        if (item instanceof ItemHoe && "WOOD".equals(((ItemHoe) item).getMaterialName())) return 200;
+        if (item == Items.STICK) return 100;
+        if (item == Items.COAL) return 1600;
+        if (item == Items.LAVA_BUCKET) return 20000;
+        if (item == Item.getItemFromBlock(Blocks.SAPLING)) return 100;
+        if (item == Items.BLAZE_ROD) return 2400;
+
+        return GameRegistry.getFuelValue(fuel);
+
     }
 
     public static boolean isItemFuel(ItemStack fuel) {

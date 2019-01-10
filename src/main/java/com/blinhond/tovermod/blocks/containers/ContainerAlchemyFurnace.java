@@ -2,6 +2,7 @@ package com.blinhond.tovermod.blocks.containers;
 
 import com.blinhond.tovermod.blocks.recipes.AlchemistFurnaceRecipes;
 import com.blinhond.tovermod.blocks.tileentities.TileEntityAlchemistFurnace;
+import com.blinhond.tovermod.util.handlers.ResultSlotItemHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -25,7 +26,7 @@ public class ContainerAlchemyFurnace extends Container {
         this.addSlotToContainer(new SlotItemHandler(handler, 0, 26, 11));
         this.addSlotToContainer(new SlotItemHandler(handler, 1, 26, 59));
         this.addSlotToContainer(new SlotItemHandler(handler, 2, 7, 35));
-        this.addSlotToContainer(new SlotItemHandler(handler, 3, 81, 36));
+        this.addSlotToContainer(new ResultSlotItemHandler(handler, 3, 81, 36));
 
         for (int y = 0; y < 3; y++) {
             for (int x = 0; x < 9; x++) {

@@ -22,7 +22,7 @@ tile.ashoreblock.name=Ash Ore
 tile.luminiteoreblock.name=Luminite Ore
 tile.solidashblock.name=Solid Ash
 tile.moonstoneoreblock.name=Moonstone Ore
-tile.alchemistfurnace.name=Alchemist' Furnace
+tile.alchemistfurnaceblock.name=Alchemist' Furnace
 
 # containers
 container.alchemistfurnace=Alchemist' Furnace

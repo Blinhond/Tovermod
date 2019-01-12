@@ -5,6 +5,9 @@ public class Reference {
     public static final String NAME = "Tovermod";
     public static final String VERSION = "1.0";
 
+    // GUI
+    public static final int GUI_ALCHEMIST_FURNACE = 1;
+
     // Constants
     public static final int MAX_STACK_SIZE_POTS= 16;
 
@@ -22,7 +25,30 @@ public class Reference {
         QUICKASH("quickash", "ItemQuickAsh"),
         VITALASH("vitalash", "ItemVitalAsh"),
         ALCHEMISTASH("alchemistash", "ItemAlchemistAsh"),
-        NEEDYFINGER("needyfinger", "ItemNeedyFinger");
+        NEEDYFINGER("needyfinger", "ItemNeedyFinger"),
+        MOONSTONE("moonstone", "ItemMoonstone"),
+        MOONSTONESHARD("moonstoneshard", "ItemMoonstoneShard"),
+        MOONSTONEPICKAXE("moonstonepickaxe", "ItemMoonstonePickaxe"),
+        GREEDYHAND("greedyhand", "ItemGreedyHand"),
+        CURSEDBLOOD("cursedblood", "ItemCursedBlood"),
+        BLOODYHAND("bloodyhand", "ItemBloodyHand"),
+        SOLIDBLOOD("solidblood", "ItemSolidBlood"),
+        POINTINGHAND("pointinghand", "ItemPointingHand"),
+        NORTHSTARSHARD("northstarshard", "ItemNorthstarShard"),
+        PRISM("prism", "ItemPrism"),
+        SOULPRISM("soulprism", "ItemSoulPrism"),
+        SATURATEDPRISM("saturatedprism", "ItemSaturatedPrism"),
+        ILLUMINATEDPRISM("illuminatedprism", "ItemIlluminatedPrism"),
+        HARDPRISM("hardprism", "ItemHardPrism"),
+        RAGINGPRISM("ragingprism", "ItemRagingPrism"),
+        CHAIN("chain", "ItemChain"),
+        HARDCHAIN("hardchain", "ItemHardChain"),
+        ABOMINATION("abomination", "ItemAbomination"),
+        BOUNDAB0MINATION("boundabomination", "ItemBoundAbomination"),
+        HUNGRYABOMINATION("hungryabomination", "ItemHungryAbomination"),
+        BLINDABOMINATION("blindabomination", "ItemBlindAbomination"),
+        WEAKABOMINATION("weakabomination", "ItemWeakAbomination"),
+        COLDABOMINATION("coldabomination", "ItemColdAbomination");
 
         private String unlocalizedName;
         private String registryName;
@@ -44,7 +70,11 @@ public class Reference {
     public static enum ToverModBlocks {
         ASHOREBLOCK("ashoreblock", "BlockAshOre"),
         LUMINITEOREBLOCK("luminiteoreblock", "BlockLuminiteOre"),
-        SOLIDASHBLOCK("solidashblock", "BlockSolidAsh");
+        SOLIDASHBLOCK("solidashblock", "BlockSolidAsh"),
+        MOONSTONEOREBLOCK("moonstoneoreblock", "BlockMoonstoneOre"),
+        ALCHEMISTFURNACE("alchemistfurnaceblock", "BlockAlchemistFurnace"),
+        BLOODBLOCK("bloodblock", "BlockBlood");
+
         private String unlocalizedName;
         private String registryName;
 

@@ -1,8 +1,8 @@
 package com.blinhond.tovermod.init;
 
-import com.blinhond.tovermod.blocks.BlockAshOre;
-import com.blinhond.tovermod.blocks.BlockLuminiteOre;
-import com.blinhond.tovermod.blocks.BlockSolidAsh;
+import com.blinhond.tovermod.blocks.*;
+import com.blinhond.tovermod.blocks.machines.BlockAlchemistFurnace;
+import com.blinhond.tovermod.util.handlers.TileEntityHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -22,17 +22,26 @@ public class ToverBlocks {
     public static BlockAshOre blockAshOre;
     public static BlockLuminiteOre blockLuminiteOre;
     public static BlockSolidAsh blockSolidAsh;
+    public static BlockMoonstoneOre blockMoonstoneOre;
+    public static BlockAlchemistFurnace blockAlchemistFurnace;
+    public static BlockBlood blockBlood;
 
     public static void init() {
         // Block initialization
         blockAshOre = new BlockAshOre();
         blockLuminiteOre = new BlockLuminiteOre();
         blockSolidAsh = new BlockSolidAsh();
+        blockMoonstoneOre = new BlockMoonstoneOre();
+        blockAlchemistFurnace = new BlockAlchemistFurnace();
+        blockBlood = new BlockBlood();
 
         // Block registration
         initList.add(blockAshOre);
         initList.add(blockLuminiteOre);
         initList.add(blockSolidAsh);
+        initList.add(blockMoonstoneOre);
+        initList.add(blockAlchemistFurnace);
+        initList.add(blockBlood);
 
         MinecraftForge.EVENT_BUS.register(new ToverBlocks());
     }
@@ -42,6 +51,8 @@ public class ToverBlocks {
         for (Block block : initList) {
             registryEvent.getRegistry().register(block);
         }
+
+        TileEntityHandler.registerTileEntities();
     }
 
     @SubscribeEvent

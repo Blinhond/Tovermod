@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "x",
+    "y",
+    "z"
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:wool"
+    },
+    "y": {
+      "item": "minecraft:furnace"
+    },
+    "z": {
+      "item": "btm:itemmoonstone"
+    }
+  },
+  "result": {
+    "item": "btm:blockalchemistfurnace",
+    "count": 1
+  }
+}

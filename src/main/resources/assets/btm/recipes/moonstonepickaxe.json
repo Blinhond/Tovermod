@@ -3,22 +3,22 @@
   "pattern":
   [
     "xxx",
-    "xyx",
-    "xxx"
+    " y ",
+    " y "
   ],
   "key":
   {
     "x":
     {
-      "item": "btm:itemalchemistash"
+      "item": "btm:itemmoonstoneshard"
     },
     "y": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:stick"
     }
   },
   "result":
   {
-    "item": "minecraft:gold_ingot",
+    "item": "btm:itemmoonstonepickaxe",
     "count": 1
   }
 }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xix",
+    "iyi",
+    "xix"
+  ],
+  "key": {
+    "x": {
+      "item": "btm:itemcursedblood"
+    },
+    "y": {
+      "item": "btm:itemprism"
+    },
+    "i": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "btm:itemsoulprism",
+    "count": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "particle": "btm:blocks/alchemistfurnaceside",
+    "up": "btm:blocks/alchemistfurnacetopoff",
+    "down": "btm:blocks/alchemistfurnacebottom",
+    "north": "btm:blocks/alchemistfurnacefrontoff",
+    "east": "btm:blocks/alchemistfurnaceside",
+    "south": "btm:blocks/alchemistfurnaceside",
+    "west": "btm:blocks/alchemistfurnaceside"
+  }
+}

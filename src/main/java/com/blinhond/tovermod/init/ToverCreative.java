@@ -8,7 +8,7 @@ public class ToverCreative {
     public static final CreativeTabs TOVERMOD = new CreativeTabs(Reference.NAME) {
         @Override
         public ItemStack getTabIconItem() {
-            return new ItemStack(ToverItems.itemAsh);
+            return new ItemStack(ToverItems.itemPrism);
         }
     };
 }

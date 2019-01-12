@@ -25,22 +25,25 @@ public class ToverBlocks {
     public static BlockMoonstoneOre blockMoonstoneOre;
     public static BlockAlchemistFurnace blockAlchemistFurnace;
     public static BlockBlood blockBlood;
+    public static BlockMoonstone blockMoonstone;
 
     public static void init() {
         // Block initialization
+        blockAlchemistFurnace = new BlockAlchemistFurnace();
         blockAshOre = new BlockAshOre();
         blockLuminiteOre = new BlockLuminiteOre();
         blockSolidAsh = new BlockSolidAsh();
         blockMoonstoneOre = new BlockMoonstoneOre();
-        blockAlchemistFurnace = new BlockAlchemistFurnace();
+        blockMoonstone = new BlockMoonstone();
         blockBlood = new BlockBlood();
 
         // Block registration
+        initList.add(blockAlchemistFurnace);
         initList.add(blockAshOre);
         initList.add(blockLuminiteOre);
-        initList.add(blockSolidAsh);
         initList.add(blockMoonstoneOre);
-        initList.add(blockAlchemistFurnace);
+        initList.add(blockSolidAsh);
+        initList.add(blockMoonstone);
         initList.add(blockBlood);
 
         MinecraftForge.EVENT_BUS.register(new ToverBlocks());

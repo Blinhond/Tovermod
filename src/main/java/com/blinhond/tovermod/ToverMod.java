@@ -3,6 +3,7 @@ package com.blinhond.tovermod;
 import com.blinhond.tovermod.init.ToverBlocks;
 import com.blinhond.tovermod.init.ToverItems;
 import com.blinhond.tovermod.init.ToverSmelting;
+import com.blinhond.tovermod.util.handlers.EntityHurtHandler;
 import com.blinhond.tovermod.util.handlers.GUIHandler;
 import com.blinhond.tovermod.worldgen.OreGenerator;
 import net.minecraftforge.fml.common.Mod;
@@ -35,6 +36,7 @@ public class ToverMod
         ToverItems.init();
         ToverBlocks.init();
         ToverSmelting.init();
+        EntityHurtHandler.init();
     }
 
     @Mod.EventHandler

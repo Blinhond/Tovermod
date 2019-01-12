@@ -19,17 +19,15 @@ public class OreGenerator implements IWorldGenerator {
     public OreGenerator() {
         ashOreGenerator = new WorldGenMinable(ToverBlocks.blockAshOre.getDefaultState(), 10);
         luminiteOreGenerator = new WorldGenMinable(ToverBlocks.blockLuminiteOre.getDefaultState(), 8);
-        moonstoneOreGenerator = new WorldGenMinable(ToverBlocks.blockMoonstoneOre.getDefaultState(), 1);
+        moonstoneOreGenerator = new WorldGenMinable(ToverBlocks.blockMoonstoneOre.getDefaultState(), 3);
     }
 
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
                          IChunkProvider chunkProvider) {
-
-
         runGenerator(ashOreGenerator, world, random, chunkX, chunkZ, 25, 0, 64);
         runGenerator(luminiteOreGenerator, world, random, chunkX, chunkZ, 15, 0, 64);
-        runGenerator(moonstoneOreGenerator, world, random, chunkX, chunkZ, 15, 16, 64);
+        runGenerator(moonstoneOreGenerator, world, random, chunkX, chunkZ, 20, 0, 64);
     }
 
     private void runGenerator(WorldGenerator generator, World world, Random rand, int chunk_X, int chunk_Z, int chancesToSpawn, int minHeight, int maxHeight) {

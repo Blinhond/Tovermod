@@ -33,7 +33,22 @@ public class Reference {
         CURSEDBLOOD("cursedblood", "ItemCursedBlood"),
         BLOODYHAND("bloodyhand", "ItemBloodyHand"),
         SOLIDBLOOD("solidblood", "ItemSolidBlood"),
-        POINTINGHAND("pointinghand", "ItemPointingHand");
+        POINTINGHAND("pointinghand", "ItemPointingHand"),
+        NORTHSTARSHARD("northstarshard", "ItemNorthstarShard"),
+        PRISM("prism", "ItemPrism"),
+        SOULPRISM("soulprism", "ItemSoulPrism"),
+        SATURATEDPRISM("saturatedprism", "ItemSaturatedPrism"),
+        ILLUMINATEDPRISM("illuminatedprism", "ItemIlluminatedPrism"),
+        HARDPRISM("hardprism", "ItemHardPrism"),
+        RAGINGPRISM("ragingprism", "ItemRagingPrism"),
+        CHAIN("chain", "ItemChain"),
+        HARDCHAIN("hardchain", "ItemHardChain"),
+        ABOMINATION("abomination", "ItemAbomination"),
+        BOUNDAB0MINATION("boundabomination", "ItemBoundAbomination"),
+        HUNGRYABOMINATION("hungryabomination", "ItemHungryAbomination"),
+        BLINDABOMINATION("blindabomination", "ItemBlindAbomination"),
+        WEAKABOMINATION("weakabomination", "ItemWeakAbomination"),
+        COLDABOMINATION("coldabomination", "ItemColdAbomination");
 
         private String unlocalizedName;
         private String registryName;

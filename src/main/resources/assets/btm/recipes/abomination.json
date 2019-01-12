@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xix",
+    "jyj",
+    "xzx"
+  ],
+  "key": {
+    "x": {
+      "item": "btm:itemcursedblood"
+    },
+    "y": {
+      "item": "btm:itemprism"
+    },
+    "z": {
+      "item": "btm:itemmoonstone"
+    },
+    "i": {
+      "item": "minecraft:spider_eye"
+    },
+    "j": {
+      "item": "btm:itemgreedyhand"
+    }
+  },
+  "result": {
+    "item": "btm:itemabomination",
+    "count": 1
+  }
+}

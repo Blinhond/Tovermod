@@ -37,6 +37,17 @@ public class AlchemistFurnaceRecipes {
         addSmeltingRecipe(ToverItems.itemGreedyHand, ToverItems.itemCursedBlood, ToverItems.itemBloodyHand);
         addSmeltingRecipe(ToverItems.itemGreedyHand, Items.DIAMOND, ToverItems.itemPointingHand);
         addSmeltingRecipe(ToverItems.itemCursedBlood, Items.IRON_INGOT, ToverItems.itemSolidBlood);
+        addSmeltingRecipe(Items.DIAMOND, ToverItems.itemMoonstone, ToverItems.itemPrism);
+        addSmeltingRecipe(ToverItems.itemChain, ToverItems.itemHardChain);
+        addSmeltingRecipe(ToverItems.itemAbomination, ToverItems.itemHardChain, ToverItems.itemBoundAbomination);
+        addSmeltingRecipe(Items.BEEF, ToverItems.itemSoulPrism, ToverItems.itemSaturatedSoulPrism);
+        addSmeltingRecipe(ToverItems.itemSaturatedSoulPrism, ToverItems.itemBoundAbomination, ToverItems.itemHungryAbomination);
+        addSmeltingRecipe(ToverItems.itemNorthstarShard, ToverItems.itemSoulPrism, ToverItems.itemIlluminatedPrism);
+        addSmeltingRecipe(ToverItems.itemIlluminatedPrism, ToverItems.itemBoundAbomination, ToverItems.itemBlindAbomination);
+        addSmeltingRecipe(Items.PAPER, ToverItems.itemSoulPrism, ToverItems.itemHardPrism);
+        addSmeltingRecipe(ToverItems.itemHardPrism, ToverItems.itemBoundAbomination, ToverItems.itemWeakAbomination);
+        addSmeltingRecipe(Items.GUNPOWDER, ToverItems.itemSoulPrism, ToverItems.itemRagingPrism);
+        addSmeltingRecipe(ToverItems.itemRagingPrism, ToverItems.itemBoundAbomination, ToverItems.itemColdAbomination);
     }
 
     public void addSmeltingRecipe(Block input, Item result) {

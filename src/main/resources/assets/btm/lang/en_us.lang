@@ -21,6 +21,22 @@ item.greedyhand.name=Greedy Hand
 item.bloodyhand.name=Bloody Hand
 item.pointinghand.name=Pointing Hand
 item.solidblood.name=Solid Blood
+item.northstarshard.name=Shard Of The North Star
+item.prism.name=Prism
+item.chain.name=Iron Chain
+item.hardchain.name=Hardened Chain
+item.abomination.name=Suffering Abomination
+item.boundabomination.name=Chained Abomination
+item.soulprism.name=Soul Prism
+item.saturatedprism.name=Soul Prism
+item.illuminatedprism.name=Soul Prism
+item.hardprism.name=Soul Prism
+item.ragingprism.name=Soul Prism
+item.hungryabomination.name=Hungry Abomination
+item.blindabomination.name=Blind Abomination
+item.weakabomination.name=Defenseless Abomination
+item.coldabomination.name=Cold Abomination
+
 
 # blocks
 tile.ashoreblock.name=Ash Ore

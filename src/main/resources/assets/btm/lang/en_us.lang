@@ -36,7 +36,12 @@ item.hungryabomination.name=Hungry Abomination
 item.blindabomination.name=Blind Abomination
 item.weakabomination.name=Defenseless Abomination
 item.coldabomination.name=Cold Abomination
-
+item.moonstoneaxe.name=Moonstone Axe
+item.moonstonehoe.name=Moonstone Hoe
+item.moonstoneshovel.name=Moonstone Shovel
+item.moonstonesword.name=Moonstone Sword
+item.crookedhand.name=Crooked Hand
+item.brokenhand.name=Broken Hand
 
 # blocks
 tile.ashoreblock.name=Ash Ore

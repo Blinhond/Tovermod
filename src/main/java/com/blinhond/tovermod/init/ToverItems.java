@@ -3,9 +3,7 @@ package com.blinhond.tovermod.init;
 import com.blinhond.tovermod.ToverMod;
 import com.blinhond.tovermod.items.*;
 import com.blinhond.tovermod.items.magic.*;
-import com.blinhond.tovermod.items.tools.ItemBloodyHand;
-import com.blinhond.tovermod.items.tools.ItemMoonstonePickaxe;
-import com.blinhond.tovermod.items.tools.ItemPointingHand;
+import com.blinhond.tovermod.items.tools.*;
 import com.blinhond.tovermod.items.treasure.ItemGoldRing;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -59,6 +57,12 @@ public class ToverItems {
     public static ItemHardPrism itemHardPrism;
     public static ItemColdAbomination itemColdAbomination;
     public static ItemRagingPrism itemRagingPrism;
+    public static ItemMoonstoneAxe itemMoonstoneAxe;
+    public static ItemMoonstoneSword itemMoonstoneSword;
+    public static ItemMoonstoneHoe itemMoonstoneHoe;
+    public static ItemMoonstoneShovel itemMoonstoneShovel;
+    public static ItemCrookedHand itemCrookedHand;
+    public static ItemBrokenHand itemBrokenHand;
 
     public static void init() {
         // Item initialization
@@ -99,6 +103,12 @@ public class ToverItems {
         itemHardPrism = new ItemHardPrism();
         itemColdAbomination = new ItemColdAbomination();
         itemRagingPrism = new ItemRagingPrism();
+        itemMoonstoneAxe = new ItemMoonstoneAxe();
+        itemMoonstoneSword = new ItemMoonstoneSword();
+        itemMoonstoneShovel = new ItemMoonstoneShovel();
+        itemMoonstoneHoe = new ItemMoonstoneHoe();
+        itemCrookedHand = new ItemCrookedHand();
+        itemBrokenHand = new ItemBrokenHand();
 
         // Item registration
         initList.add(itemAsh);
@@ -138,6 +148,12 @@ public class ToverItems {
         initList.add(itemHardPrism);
         initList.add(itemColdAbomination);
         initList.add(itemRagingPrism);
+        initList.add(itemMoonstoneAxe);
+        initList.add(itemMoonstoneSword);
+        initList.add(itemMoonstoneHoe);
+        initList.add(itemMoonstoneShovel);
+        initList.add(itemCrookedHand);
+        initList.add(itemBrokenHand);
 
         // Magical item registration
         magicItemList.add(itemGoldRing);

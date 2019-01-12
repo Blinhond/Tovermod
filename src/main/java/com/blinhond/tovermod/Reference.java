@@ -79,7 +79,8 @@ public class Reference {
         SOLIDASHBLOCK("solidashblock", "BlockSolidAsh"),
         MOONSTONEOREBLOCK("moonstoneoreblock", "BlockMoonstoneOre"),
         ALCHEMISTFURNACE("alchemistfurnaceblock", "BlockAlchemistFurnace"),
-        BLOODBLOCK("bloodblock", "BlockBlood");
+        BLOODBLOCK("bloodblock", "BlockBlood"),
+        MOONSTONEBLOCK("moonstoneblock", "BlockMoonstone");
 
         private String unlocalizedName;
         private String registryName;

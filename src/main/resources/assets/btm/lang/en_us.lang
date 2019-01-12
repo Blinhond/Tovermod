@@ -50,6 +50,7 @@ tile.solidashblock.name=Solid Ash
 tile.moonstoneoreblock.name=Moonstone Ore
 tile.alchemistfurnaceblock.name=Alchemist' Furnace
 tile.bloodblock.name=Blood Block
+tile.moonstoneblock.name=Moonstone Block
 
 # containers
 container.alchemistfurnace=Alchemist' Furnace

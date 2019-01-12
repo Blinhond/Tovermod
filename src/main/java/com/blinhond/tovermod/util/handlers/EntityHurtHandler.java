@@ -15,10 +15,11 @@ public class EntityHurtHandler {
 
     @SubscribeEvent
     public void entityHurtEvent(LivingHurtEvent event) {
-        if (event.getEntity() instanceof EntityPlayer
+        if (event.getSource().getTrueSource() != null && event.getEntity() instanceof EntityPlayer
                 && ((EntityPlayer) event.getEntity()).inventory.hasItemStack(new ItemStack(ToverItems.itemWeakAbomination))) {
             event.setAmount(event.getAmount() / 2);
         }
+
         if (event.getSource().getTrueSource() != null && event.getEntity() instanceof EntityPlayer
                 && ((EntityPlayer) event.getEntity()).inventory.hasItemStack(new ItemStack(ToverItems.itemColdAbomination))) {
             int fireDuration = 10;

@@ -67,93 +67,115 @@ public class ToverItems {
     public static void init() {
         // Item initialization
         itemAsh = new ItemAsh();
-        itemUrn = new ItemUrn();
-        itemRawUrn = new ItemRawUrn();
-        itemFilledUrn = new ItemFilledUrn();
-        itemCleanAsh = new ItemCleanAsh();
-        itemGoldRing = new ItemGoldRing();
-        itemNocturnalEye = new ItemNocturnalEye();
-        itemLuminiteShard = new ItemLuminiteShard();
-        itemIlluminatedShard = new ItemIlluminatedShard();
         itemBlackAsh = new ItemBlackAsh();
         itemQuickAsh = new ItemQuickAsh();
         itemVitalAsh = new ItemVitalAsh();
+        itemCleanAsh = new ItemCleanAsh();
         itemAlchemistAsh = new ItemAlchemistAsh();
-        itemNeedyFinger = new ItemNeedyFinger();
-        itemMoonstone = new ItemMoonstone();
-        itemMoonstoneShard = new ItemMoonstoneShard();
-        itemMoonstonePickaxe = new ItemMoonstonePickaxe();
-        itemGreedyHand = new ItemGreedyHand();
-        itemCursedBlood = new ItemCursedBlood();
-        itemBloodyHand = new ItemBloodyHand();
-        itemSolidBlood = new ItemSolidBlood();
-        itemPointingHand = new ItemPointingHand();
-        itemNorthstarShard = new ItemNorthstarShard();
-        itemPrism = new ItemPrism();
+
+        itemLuminiteShard = new ItemLuminiteShard();
+        itemIlluminatedShard = new ItemIlluminatedShard();
+
         itemChain = new ItemChain();
         itemHardChain = new ItemHardChain();
+
+        itemCursedBlood = new ItemCursedBlood();
+        itemSolidBlood = new ItemSolidBlood();
+        itemNeedyFinger = new ItemNeedyFinger();
+
+        itemMoonstone = new ItemMoonstone();
+        itemMoonstoneShard = new ItemMoonstoneShard();
+        itemNorthstarShard = new ItemNorthstarShard();
+
+        itemPrism = new ItemPrism();
+        itemSoulPrism = new ItemSoulPrism();
+        itemHardPrism = new ItemHardPrism();
+        itemSaturatedSoulPrism = new ItemSaturatedSoulPrism();
+        itemRagingPrism = new ItemRagingPrism();
+        itemIlluminatedPrism = new ItemIlluminatedPrism();
+
         itemAbomination = new ItemAbomination();
         itemBoundAbomination = new ItemBoundAbomination();
-        itemSoulPrism = new ItemSoulPrism();
         itemHungryAbomination = new ItemHungryAbomination();
-        itemSaturatedSoulPrism = new ItemSaturatedSoulPrism();
         itemBlindAbomination = new ItemBlindAbomination();
-        itemIlluminatedPrism = new ItemIlluminatedPrism();
         itemWeakAbomination = new ItemWeakAbomination();
-        itemHardPrism = new ItemHardPrism();
         itemColdAbomination = new ItemColdAbomination();
-        itemRagingPrism = new ItemRagingPrism();
-        itemMoonstoneAxe = new ItemMoonstoneAxe();
+
         itemMoonstoneSword = new ItemMoonstoneSword();
+        itemMoonstonePickaxe = new ItemMoonstonePickaxe();
+        itemMoonstoneAxe = new ItemMoonstoneAxe();
         itemMoonstoneShovel = new ItemMoonstoneShovel();
         itemMoonstoneHoe = new ItemMoonstoneHoe();
+
+        itemGreedyHand = new ItemGreedyHand();
+        itemBloodyHand = new ItemBloodyHand();
+        itemPointingHand = new ItemPointingHand();
         itemCrookedHand = new ItemCrookedHand();
         itemBrokenHand = new ItemBrokenHand();
 
+
+        itemUrn = new ItemUrn();
+        itemRawUrn = new ItemRawUrn();
+        itemFilledUrn = new ItemFilledUrn();
+        itemGoldRing = new ItemGoldRing();
+        itemNocturnalEye = new ItemNocturnalEye();
+
         // Item registration
         initList.add(itemAsh);
-        initList.add(itemUrn);
-        initList.add(itemRawUrn);
-        initList.add(itemFilledUrn);
-        initList.add(itemCleanAsh);
-        initList.add(itemGoldRing);
-        initList.add(itemNocturnalEye);
-        initList.add(itemLuminiteShard);
-        initList.add(itemIlluminatedShard);
         initList.add(itemBlackAsh);
+        initList.add(itemCleanAsh);
+        initList.add(itemAlchemistAsh);
         initList.add(itemQuickAsh);
         initList.add(itemVitalAsh);
         initList.add(itemAlchemistAsh);
-        initList.add(itemNeedyFinger);
-        initList.add(itemMoonstone);
-        initList.add(itemMoonstoneShard);
-        initList.add(itemMoonstonePickaxe);
-        initList.add(itemGreedyHand);
-        initList.add(itemCursedBlood);
-        initList.add(itemBloodyHand);
-        initList.add(itemSolidBlood);
-        initList.add(itemPointingHand);
-        initList.add(itemNorthstarShard);
-        initList.add(itemPrism);
+
+        initList.add(itemLuminiteShard);
+        initList.add(itemIlluminatedShard);
+
         initList.add(itemChain);
         initList.add(itemHardChain);
+
+        initList.add(itemCursedBlood);
+        initList.add(itemSolidBlood);
+        initList.add(itemNeedyFinger);
+
+        initList.add(itemMoonstone);
+        initList.add(itemMoonstoneShard);
+        initList.add(itemNorthstarShard);
+
+        initList.add(itemPrism);
+        initList.add(itemSoulPrism);
+        initList.add(itemHardPrism);
+        initList.add(itemRagingPrism);
+        initList.add(itemIlluminatedPrism);
+        initList.add(itemSaturatedSoulPrism);
+
         initList.add(itemAbomination);
         initList.add(itemBoundAbomination);
-        initList.add(itemSoulPrism);
         initList.add(itemHungryAbomination);
-        initList.add(itemSaturatedSoulPrism);
         initList.add(itemBlindAbomination);
-        initList.add(itemIlluminatedPrism);
         initList.add(itemWeakAbomination);
-        initList.add(itemHardPrism);
         initList.add(itemColdAbomination);
-        initList.add(itemRagingPrism);
-        initList.add(itemMoonstoneAxe);
+
         initList.add(itemMoonstoneSword);
-        initList.add(itemMoonstoneHoe);
+        initList.add(itemMoonstonePickaxe);
+        initList.add(itemMoonstoneAxe);
         initList.add(itemMoonstoneShovel);
+        initList.add(itemMoonstoneHoe);
+
+        initList.add(itemBloodyHand);
+        initList.add(itemPointingHand);
+        initList.add(itemGreedyHand);
         initList.add(itemCrookedHand);
         initList.add(itemBrokenHand);
+
+
+        // NO OP items
+        initList.add(itemUrn);
+        initList.add(itemRawUrn);
+        initList.add(itemFilledUrn);
+        initList.add(itemGoldRing);
+        initList.add(itemNocturnalEye);
 
         // Magical item registration
         magicItemList.add(itemGoldRing);

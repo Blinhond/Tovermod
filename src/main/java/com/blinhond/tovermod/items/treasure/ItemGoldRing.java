@@ -8,7 +8,7 @@ public class ItemGoldRing extends Item {
     public ItemGoldRing() {
         setRegistryName(Reference.ToverModItems.GOLDRING.getRegistryName());
         setUnlocalizedName(Reference.ToverModItems.GOLDRING.getUnlocalizedName());
-        setCreativeTab(ToverCreative.TOVERMOD);
+//        setCreativeTab(ToverCreative.TOVERMOD);
         setMaxStackSize(1);
     }
 }

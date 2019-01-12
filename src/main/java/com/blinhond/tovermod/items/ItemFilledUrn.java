@@ -8,6 +8,6 @@ public class ItemFilledUrn extends Item {
     public ItemFilledUrn() {
         setRegistryName(Reference.ToverModItems.FILLEDURN.getRegistryName());
         setUnlocalizedName(Reference.ToverModItems.FILLEDURN.getUnlocalizedName());
-        setCreativeTab(ToverCreative.TOVERMOD);
+//        setCreativeTab(ToverCreative.TOVERMOD);
     }
 }

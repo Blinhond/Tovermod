@@ -8,6 +8,6 @@ public class ItemNocturnalEye extends Item {
     public ItemNocturnalEye() {
         setRegistryName(Reference.ToverModItems.NOCTURNALEYE.getRegistryName());
         setUnlocalizedName(Reference.ToverModItems.NOCTURNALEYE.getUnlocalizedName());
-        setCreativeTab(ToverCreative.TOVERMOD);
+//        setCreativeTab(ToverCreative.TOVERMOD);
     }
 }

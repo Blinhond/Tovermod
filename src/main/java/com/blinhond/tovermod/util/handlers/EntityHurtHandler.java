@@ -15,8 +15,6 @@ public class EntityHurtHandler {
 
     @SubscribeEvent
     public void entityHurtEvent(LivingHurtEvent event) {
-        System.out.println("HUUUUUURTT!!");
-
         if (event.getEntity() instanceof EntityPlayer
                 && ((EntityPlayer) event.getEntity()).inventory.hasItemStack(new ItemStack(ToverItems.itemWeakAbomination))) {
             event.setAmount(event.getAmount() / 2);

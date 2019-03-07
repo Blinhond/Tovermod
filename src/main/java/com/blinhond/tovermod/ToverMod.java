@@ -24,7 +24,7 @@ public class ToverMod
 
     public static final Random RANDOM = new Random();
 
-    private static Logger logger;
+    public static Logger logger;
 
     @Mod.Instance
     public static ToverMod instance;

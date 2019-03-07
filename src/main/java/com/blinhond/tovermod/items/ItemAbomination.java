@@ -46,6 +46,6 @@ public class ItemAbomination extends Item {
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         super.addInformation(stack, worldIn, tooltip, flagIn);
 
-        tooltip.add("The product of reckless experimentation...");
+        tooltip.add("The product of reckless experimentation.");
     }
 }

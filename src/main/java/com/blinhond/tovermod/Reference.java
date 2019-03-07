@@ -55,7 +55,8 @@ public class Reference {
         BLINDABOMINATION("blindabomination", "ItemBlindAbomination"),
         WEAKABOMINATION("weakabomination", "ItemWeakAbomination"),
         COLDABOMINATION("coldabomination", "ItemColdAbomination"),
-        BLOODCLOTH("bloodcloth", "ItemBloodCloth");
+        BLOODCLOTH("bloodcloth", "ItemBloodCloth"),
+        FORBIDDENNEEDLE("forbiddenneedle", "ItemForbiddenNeedle");
 
         private String unlocalizedName;
         private String registryName;

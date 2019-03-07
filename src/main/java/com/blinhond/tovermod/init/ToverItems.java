@@ -64,6 +64,7 @@ public class ToverItems {
     public static ItemCrookedHand itemCrookedHand;
     public static ItemBrokenHand itemBrokenHand;
     public static ItemBloodCloth itemBloodCloth;
+    public static ItemForbiddenNeedle itemForbiddenNeedle;
 
     public static void init() {
         // Item initialization
@@ -114,6 +115,8 @@ public class ToverItems {
         itemPointingHand = new ItemPointingHand();
         itemCrookedHand = new ItemCrookedHand();
         itemBrokenHand = new ItemBrokenHand();
+
+        itemForbiddenNeedle = new ItemForbiddenNeedle();
 
         // NO OP items
         itemUrn = new ItemUrn();
@@ -171,6 +174,8 @@ public class ToverItems {
         initList.add(itemGreedyHand);
         initList.add(itemCrookedHand);
         initList.add(itemBrokenHand);
+
+        initList.add(itemForbiddenNeedle);
 
 
         // NO OP items

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xyx",
+    "xyx",
+    "xyx"
+  ],
+  "key": {
+    "x": {
+      "item": "btm:itembloodcloth"
+    },
+    "y": {
+      "item": "btm:itemnorthstarshard"
+    }
+  },
+  "result": {
+    "item": "btm:itemforbiddenneedle",
+    "count": 1
+  }
+}

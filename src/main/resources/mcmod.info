@@ -8,8 +8,8 @@
   "url": "",
   "updateUrl": "",
   "authorList": ["Blinhond"],
-  "credits": "The Forge and FML guys for supplying the MC mod API and the corresponding documentation.",
-  "logoFile": "",
+  "credits": "",
+  "logoFile": "/assets/btm/textures/items/northstarshard",
   "screenshots": [],
   "dependencies": []
 }

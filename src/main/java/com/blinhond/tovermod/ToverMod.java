@@ -23,7 +23,7 @@ public class ToverMod {
 
     public static final Random RANDOM = new Random();
 
-    public static Logger logger;
+    private static Logger logger;
 
     @Mod.Instance
     public static ToverMod instance;
@@ -31,17 +31,21 @@ public class ToverMod {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
+        logger.info("Pre-init started..");
         ToverItems.init();
         ToverBlocks.init();
         ToverSmelting.init();
         EntityHurtHandler.init();
+        logger.info("Pre Init finished.");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        logger.info("Init started..");
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
         ToverItems.registerRenders();
         ToverBlocks.registerRenders();
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GUIHandler());
+        logger.info("Init finished.");
     }
 }

@@ -6,8 +6,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class TileEntityHandler {
-    public static void registerTileEntities()
-    {
+    public static void registerTileEntities() {
         GameRegistry.registerTileEntity(TileEntityAlchemistFurnace.class, new ResourceLocation(Reference.MOD_ID + ":alchemistfurnaceblock"));
     }
 }

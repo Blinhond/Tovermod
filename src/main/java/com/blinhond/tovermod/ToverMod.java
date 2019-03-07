@@ -16,8 +16,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.Random;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
-public class ToverMod
-{
+public class ToverMod {
     public static final String MODID = "btm";
     public static final String NAME = "Tovermod";
     public static final String VERSION = "1.0";
@@ -30,8 +29,7 @@ public class ToverMod
     public static ToverMod instance;
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event)
-    {
+    public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
         ToverItems.init();
         ToverBlocks.init();
@@ -40,8 +38,7 @@ public class ToverMod
     }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent event)
-    {
+    public void init(FMLInitializationEvent event) {
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);
         ToverItems.registerRenders();
         ToverBlocks.registerRenders();

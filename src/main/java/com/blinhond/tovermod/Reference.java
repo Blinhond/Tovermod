@@ -9,11 +9,11 @@ public class Reference {
     public static final int GUI_ALCHEMIST_FURNACE = 1;
 
     // Constants
-    public static final int MAX_STACK_SIZE_POTS= 16;
+    public static final int MAX_STACK_SIZE_POTS = 16;
 
     public static enum ToverModItems {
         ASH("ash", "ItemAsh"),
-        CLEANASH("cleanash",  "ItemCleanAsh"),
+        CLEANASH("cleanash", "ItemCleanAsh"),
         URN("urn", "ItemUrn"),
         RAWURN("rawurn", "ItemRawUrn"),
         FILLEDURN("filledurn", "ItemFilledUrn"),
@@ -54,7 +54,9 @@ public class Reference {
         HUNGRYABOMINATION("hungryabomination", "ItemHungryAbomination"),
         BLINDABOMINATION("blindabomination", "ItemBlindAbomination"),
         WEAKABOMINATION("weakabomination", "ItemWeakAbomination"),
-        COLDABOMINATION("coldabomination", "ItemColdAbomination");
+        COLDABOMINATION("coldabomination", "ItemColdAbomination"),
+        BLOODCLOTH("bloodcloth", "ItemBloodCloth"),
+        FORBIDDENNEEDLE("forbiddenneedle", "ItemForbiddenNeedle");
 
         private String unlocalizedName;
         private String registryName;

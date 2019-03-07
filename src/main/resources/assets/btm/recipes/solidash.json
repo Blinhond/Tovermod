@@ -1,20 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern":
-  [
+  "pattern": [
     "xxx",
     "xxx",
     "xxx"
   ],
-  "key":
-  {
-    "x":
-    {
+  "key": {
+    "x": {
       "item": "btm:itemash"
     }
   },
-  "result":
-  {
+  "result": {
     "item": "btm:blocksolidash",
     "count": 1
   }

@@ -1,20 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern":
-  [
+  "pattern": [
     "x x",
     "x x",
     "xxx"
   ],
-  "key":
-  {
-    "x":
-    {
+  "key": {
+    "x": {
       "item": "minecraft:clay_ball"
     }
   },
-  "result":
-  {
+  "result": {
     "item": "btm:itemrawurn",
     "count": 1
   }

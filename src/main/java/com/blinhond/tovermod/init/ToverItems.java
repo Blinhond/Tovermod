@@ -63,6 +63,8 @@ public class ToverItems {
     public static ItemMoonstoneShovel itemMoonstoneShovel;
     public static ItemCrookedHand itemCrookedHand;
     public static ItemBrokenHand itemBrokenHand;
+    public static ItemBloodCloth itemBloodCloth;
+    public static ItemForbiddenNeedle itemForbiddenNeedle;
 
     public static void init() {
         // Item initialization
@@ -80,6 +82,7 @@ public class ToverItems {
         itemHardChain = new ItemHardChain();
 
         itemCursedBlood = new ItemCursedBlood();
+        itemBloodCloth = new ItemBloodCloth();
         itemSolidBlood = new ItemSolidBlood();
         itemNeedyFinger = new ItemNeedyFinger();
 
@@ -113,7 +116,9 @@ public class ToverItems {
         itemCrookedHand = new ItemCrookedHand();
         itemBrokenHand = new ItemBrokenHand();
 
+        itemForbiddenNeedle = new ItemForbiddenNeedle();
 
+        // NO OP items
         itemUrn = new ItemUrn();
         itemRawUrn = new ItemRawUrn();
         itemFilledUrn = new ItemFilledUrn();
@@ -136,6 +141,7 @@ public class ToverItems {
         initList.add(itemHardChain);
 
         initList.add(itemCursedBlood);
+        initList.add(itemBloodCloth);
         initList.add(itemSolidBlood);
         initList.add(itemNeedyFinger);
 
@@ -168,6 +174,8 @@ public class ToverItems {
         initList.add(itemGreedyHand);
         initList.add(itemCrookedHand);
         initList.add(itemBrokenHand);
+
+        initList.add(itemForbiddenNeedle);
 
 
         // NO OP items

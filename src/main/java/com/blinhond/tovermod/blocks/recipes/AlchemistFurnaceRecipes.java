@@ -18,8 +18,7 @@ public class AlchemistFurnaceRecipes {
     private final List<Triple<ItemStack, ItemStack, ItemStack>> smeltingList = new ArrayList<>();
     private final Map<ItemStack, Float> experienceList = Maps.<ItemStack, Float>newHashMap();
 
-    public static AlchemistFurnaceRecipes getInstance()
-    {
+    public static AlchemistFurnaceRecipes getInstance() {
         if (INSTANCE == null) {
             INSTANCE = new AlchemistFurnaceRecipes();
         }
@@ -27,8 +26,7 @@ public class AlchemistFurnaceRecipes {
         return INSTANCE;
     }
 
-    private AlchemistFurnaceRecipes()
-    {
+    private AlchemistFurnaceRecipes() {
         addSmeltingRecipe(Blocks.LOG, Items.COAL);
         addSmeltingRecipe(Items.IRON_INGOT, Items.GOLD_INGOT);
         addSmeltingRecipe(Items.APPLE, ToverItems.itemVitalAsh);
@@ -68,43 +66,34 @@ public class AlchemistFurnaceRecipes {
         addSmeltingRecipe(new ItemStack(input1), new ItemStack(input2), new ItemStack(result), 0.5F);
     }
 
-    public void addSmeltingRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience)
-    {
-        if(getSmeltingResult(input1, input2) != ItemStack.EMPTY) return;
+    public void addSmeltingRecipe(ItemStack input1, ItemStack input2, ItemStack result, float experience) {
+        if (getSmeltingResult(input1, input2) != ItemStack.EMPTY) return;
         this.smeltingList.add(Triple.of(input1, input2, result));
         this.experienceList.put(result, Float.valueOf(experience));
     }
 
-    public ItemStack getSmeltingResult(ItemStack input1, ItemStack input2)
-    {
-        for (Triple<ItemStack, ItemStack, ItemStack> triple : smeltingList)
-        {
+    public ItemStack getSmeltingResult(ItemStack input1, ItemStack input2) {
+        for (Triple<ItemStack, ItemStack, ItemStack> triple : smeltingList) {
 
-            if (this.compareItemStacks(input1, triple.getLeft()) && this.compareItemStacks(input2, triple.getMiddle()))
-            {
+            if (this.compareItemStacks(input1, triple.getLeft()) && this.compareItemStacks(input2, triple.getMiddle())) {
                 return triple.getRight().copy();
             }
         }
         return ItemStack.EMPTY;
     }
 
-    private boolean compareItemStacks(ItemStack stack1, ItemStack stack2)
-    {
+    private boolean compareItemStacks(ItemStack stack1, ItemStack stack2) {
         return stack2.getItem() == stack1.getItem();
     }
 
-    public List<Triple<ItemStack, ItemStack, ItemStack>> getDualSmeltingList()
-    {
+    public List<Triple<ItemStack, ItemStack, ItemStack>> getDualSmeltingList() {
         return this.smeltingList;
     }
 
-    public float getSmeltingExperience(ItemStack stack)
-    {
-        for (Map.Entry<ItemStack, Float> entry : this.experienceList.entrySet())
-        {
-            if(this.compareItemStacks(stack, (ItemStack)entry.getKey()))
-            {
-                return ((Float)entry.getValue()).floatValue();
+    public float getSmeltingExperience(ItemStack stack) {
+        for (Map.Entry<ItemStack, Float> entry : this.experienceList.entrySet()) {
+            if (this.compareItemStacks(stack, (ItemStack) entry.getKey())) {
+                return ((Float) entry.getValue()).floatValue();
             }
         }
         return 0.0F;

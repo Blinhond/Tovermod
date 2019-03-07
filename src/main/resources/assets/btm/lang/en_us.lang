@@ -42,6 +42,7 @@ item.moonstoneshovel.name=Moonstone Shovel
 item.moonstonesword.name=Moonstone Sword
 item.crookedhand.name=Crooked Hand
 item.brokenhand.name=Broken Hand
+item.bloodcloth.name=Blood Soaked Cloth
 
 # blocks
 tile.ashoreblock.name=Ash Ore

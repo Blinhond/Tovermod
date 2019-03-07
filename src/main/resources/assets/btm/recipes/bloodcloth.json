@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "btm:itemcleanash"
+      "item": "btm:itemcursedblood"
     },
     {
-      "item": "btm:itemilluminatedshard"
+      "item": "minecraft:paper"
     }
   ],
   "result": {
-    "item": "btm:itemalchemistash",
+    "item": "btm:itembloodcloth",
     "count": 1
   }
 }

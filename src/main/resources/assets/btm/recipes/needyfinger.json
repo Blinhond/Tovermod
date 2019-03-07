@@ -1,15 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern":
-  [
+  "pattern": [
     "xxx",
     "xyx",
     "xzx"
   ],
-  "key":
-  {
-    "x":
-    {
+  "key": {
+    "x": {
       "item": "minecraft:rotten_flesh"
     },
     "y": {
@@ -19,8 +16,7 @@
       "item": "minecraft:bone"
     }
   },
-  "result":
-  {
+  "result": {
     "item": "btm:itemneedyfinger",
     "count": 1
   }

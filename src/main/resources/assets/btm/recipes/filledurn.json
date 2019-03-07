@@ -8,8 +8,7 @@
       "item": "btm:itemurn"
     }
   ],
-  "result":
-  {
+  "result": {
     "item": "btm:itemfilledurn",
     "count": 1
   }

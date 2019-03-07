@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "btm:itemcleanash"
+      "item": "btm:itemblackash"
     },
     {
       "item": "minecraft:spider_eye"

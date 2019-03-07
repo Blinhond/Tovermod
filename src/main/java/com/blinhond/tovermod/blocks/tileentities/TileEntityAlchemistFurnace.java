@@ -35,55 +35,52 @@ public class TileEntityAlchemistFurnace extends TileEntity implements ITickable 
 
     @Override
     public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
-        if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return true;
-        else return false;
+        return capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY;
     }
 
     @Override
     public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
-        if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) return (T) this.handler;
+        if (capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+            return (T) handler;
+        }
         return super.getCapability(capability, facing);
     }
 
-    public boolean hasCustomName() {
-        return this.customName != null && !this.customName.isEmpty();
+    private boolean hasCustomName() {
+        return customName != null && !customName.isEmpty();
     }
 
-    public void setCustomName(String customName) {
+    private void setCustomName(String customName) {
         this.customName = customName;
     }
 
     @Override
     public ITextComponent getDisplayName() {
-        return this.hasCustomName() ? new TextComponentString(this.customName) : new TextComponentTranslation("container.alchemistfurnace");
+        return this.hasCustomName() ? new TextComponentString(customName) : new TextComponentTranslation("container.alchemistfurnace");
     }
 
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
-        this.handler.deserializeNBT(compound.getCompoundTag("Inventory"));
-        this.burnTime = compound.getInteger("BurnTime");
-        this.cookTime = compound.getInteger("CookTime");
-        this.totalCookTime = compound.getInteger("CookTimeTotal");
-        this.currentBurnTime = getItemBurnTime((ItemStack) this.handler.getStackInSlot(2));
+        handler.deserializeNBT(compound.getCompoundTag("Inventory"));
+        burnTime = compound.getInteger("BurnTime");
+        cookTime = compound.getInteger("CookTime");
+        totalCookTime = compound.getInteger("CookTimeTotal");
+        currentBurnTime = getItemBurnTime((ItemStack) handler.getStackInSlot(2));
 
-        if (compound.hasKey("CustomName", 8)) this.setCustomName(compound.getString("CustomName"));
+        if (compound.hasKey("CustomName", 8)) setCustomName(compound.getString("CustomName"));
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
         super.writeToNBT(compound);
-        compound.setInteger("BurnTime", (short) this.burnTime);
-        compound.setInteger("CookTime", (short) this.cookTime);
-        compound.setInteger("CookTimeTotal", (short) this.totalCookTime);
-        compound.setTag("Inventory", this.handler.serializeNBT());
+        compound.setInteger("BurnTime", (short) burnTime);
+        compound.setInteger("CookTime", (short) cookTime);
+        compound.setInteger("CookTimeTotal", (short) totalCookTime);
+        compound.setTag("Inventory", handler.serializeNBT());
 
-        if (this.hasCustomName()) compound.setString("CustomName", this.customName);
+        if (hasCustomName()) compound.setString("CustomName", customName);
         return compound;
-    }
-
-    public boolean isBurning() {
-        return this.burnTime > 0;
     }
 
     @SideOnly(Side.CLIENT)
@@ -92,68 +89,60 @@ public class TileEntityAlchemistFurnace extends TileEntity implements ITickable 
     }
 
     public void update() {
-        if (this.isBurning()) {
-            --this.burnTime;
-        }
-
-        BlockAlchemistFurnace.setState(isBurning(), world, pos);
-
+        boolean canSmelt = canSmelt();
         ItemStack[] inputs = new ItemStack[]{handler.getStackInSlot(0), handler.getStackInSlot(1)};
-        ItemStack fuel = this.handler.getStackInSlot(2);
+        ItemStack fuel = handler.getStackInSlot(2);
 
-        if (this.isBurning() || !fuel.isEmpty() && !this.handler.getStackInSlot(0).isEmpty() && !this.handler.getStackInSlot(1).isEmpty()) {
-            if (!this.isBurning() && this.canSmelt()) {
-                this.burnTime = getItemBurnTime(fuel);
-                this.currentBurnTime = burnTime;
-
-                if (this.isBurning() && !fuel.isEmpty()) {
-                    Item item = fuel.getItem();
-                    fuel.shrink(1);
-
-                    if (fuel.isEmpty()) {
-                        ItemStack item1 = item.getContainerItem(fuel);
-                        this.handler.setStackInSlot(2, item1);
-                    }
-                }
-            }
+        if (isBurning()) {
+            --burnTime;
+        } else {
+            BlockAlchemistFurnace.setState(false, world, pos);
         }
 
-        if (this.isBurning() && this.canSmelt() && cookTime > 0) {
+        if (fuel.isEmpty()) {
+            ItemStack itemFuel = fuel.getItem().getContainerItem(fuel);
+            handler.setStackInSlot(2, itemFuel);
+        }
+
+        if (!isBurning() && !fuel.isEmpty() && canSmelt) {
+            burnTime = getItemBurnTime(fuel);
+            currentBurnTime = burnTime;
+
+            BlockAlchemistFurnace.setState(true, world, pos);
+
+            fuel.shrink(1);
+
+            smelting = recipes.getSmeltingResult(handler.getStackInSlot(0), handler.getStackInSlot(1));
+        }
+
+        if (isBurning() && canSmelt) {
             cookTime++;
+        } else if (!canSmelt) {
+            cookTime = 0;
+        }
 
-            if (cookTime == totalCookTime) {
-                if (handler.getStackInSlot(3).getCount() > 0) {
-                    handler.getStackInSlot(3).grow(1);
-                } else {
-                    handler.insertItem(3, smelting, false);
-                }
+        if (cookTime == totalCookTime) {
+            cookTime = 0;
+            if (handler.getStackInSlot(3).isEmpty()) {
+                handler.setStackInSlot(3, smelting.copy());
+            } else {
+                handler.getStackInSlot(3).grow(1);
+            }
 
-                smelting = ItemStack.EMPTY;
-                cookTime = 0;
-                return;
-            }
-        } else if (this.isBurning() && this.canSmelt()) {
-            ItemStack output = AlchemistFurnaceRecipes.getInstance().getSmeltingResult(inputs[0], inputs[1]);
-            if (!output.isEmpty()) {
-                smelting = output;
-                cookTime++;
-                inputs[0].shrink(1);
-                inputs[1].shrink(1);
-                handler.setStackInSlot(0, inputs[0]);
-                handler.setStackInSlot(1, inputs[1]);
-            }
+            inputs[0].shrink(1);
+            inputs[1].shrink(1);
         }
     }
 
     private boolean canSmelt() {
-        if (this.handler.getStackInSlot(0).isEmpty() || this.handler.getStackInSlot(1).isEmpty())
+        if (handler.getStackInSlot(0).isEmpty() || handler.getStackInSlot(1).isEmpty())
             return false;
         else {
-            ItemStack result = recipes.getSmeltingResult(this.handler.getStackInSlot(0), this.handler.getStackInSlot(1));
+            ItemStack result = recipes.getSmeltingResult(handler.getStackInSlot(0), handler.getStackInSlot(1));
 
             if (result.isEmpty()) return false;
             else {
-                ItemStack output = this.handler.getStackInSlot(3);
+                ItemStack output = handler.getStackInSlot(3);
                 if (output.isEmpty()) return true;
                 if (!output.isItemEqual(result)) return false;
                 int res = output.getCount() + result.getCount();
@@ -162,7 +151,7 @@ public class TileEntityAlchemistFurnace extends TileEntity implements ITickable 
         }
     }
 
-    public static int getItemBurnTime(ItemStack fuel) {
+    private static int getItemBurnTime(ItemStack fuel) {
         if (fuel.isEmpty()) return 0;
 
         Item item = fuel.getItem();
@@ -193,19 +182,19 @@ public class TileEntityAlchemistFurnace extends TileEntity implements ITickable 
     }
 
     public boolean isUsableByPlayer(EntityPlayer player) {
-        return this.world.getTileEntity(this.pos) != this ? false : player.getDistanceSq((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <= 64.0D;
+        return this.world.getTileEntity(this.pos) == this && player.getDistanceSq((double) this.pos.getX() + 0.5D, (double) this.pos.getY() + 0.5D, (double) this.pos.getZ() + 0.5D) <= 64.0D;
     }
 
     public int getField(int id) {
         switch (id) {
             case 0:
-                return this.burnTime;
+                return burnTime;
             case 1:
-                return this.currentBurnTime;
+                return currentBurnTime;
             case 2:
-                return this.cookTime;
+                return cookTime;
             case 3:
-                return this.totalCookTime;
+                return totalCookTime;
             default:
                 return 0;
         }
@@ -214,16 +203,20 @@ public class TileEntityAlchemistFurnace extends TileEntity implements ITickable 
     public void setField(int id, int value) {
         switch (id) {
             case 0:
-                this.burnTime = value;
+                burnTime = value;
                 break;
             case 1:
-                this.currentBurnTime = value;
+                currentBurnTime = value;
                 break;
             case 2:
-                this.cookTime = value;
+                cookTime = value;
                 break;
             case 3:
-                this.totalCookTime = value;
+                totalCookTime = value;
         }
+    }
+
+    private boolean isBurning() {
+        return burnTime > 0;
     }
 }

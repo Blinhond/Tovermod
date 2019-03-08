@@ -47,7 +47,7 @@ public class AlchemistFurnaceRecipes {
         addSmeltingRecipe(Items.GUNPOWDER, ToverItems.itemSoulPrism, ToverItems.itemRagingPrism);
         addSmeltingRecipe(ToverItems.itemRagingPrism, ToverItems.itemBoundAbomination, ToverItems.itemColdAbomination);
         addSmeltingRecipe(Blocks.LOG, ToverItems.itemGreedyHand, ToverItems.itemCrookedHand);
-        addSmeltingRecipe(Items.POTATO, ToverItems.itemGreedyHand, ToverItems.itemBrokenHand);
+        addSmeltingRecipe(Items.FLINT, ToverItems.itemGreedyHand, ToverItems.itemBrokenHand);
     }
 
     public void addSmeltingRecipe(Block input, Item result) {
